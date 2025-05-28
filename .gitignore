@@ -2,3 +2,10 @@ node_modules/
 npm-debug.log*
 .DS_Store
 dist/*
+ley.config.js
+tsconfig.json
+.env
+.env.example
+migrations
+util/config.js
+database/connect.ts
