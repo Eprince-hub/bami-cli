@@ -15,16 +15,19 @@
     "postbuild": "cp -r src/templates dist/templates",
     "dev": "tsx src/index.ts",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run --coverage"
   },
   "dependencies": {
     "commander": "^14.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
+    "@vitest/coverage-v8": "^3.1.4",
+    "execa": "^9.6.0",
     "tsup": "^8.5.0",
     "tsx": "^4.19.4",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
   },
   "packageManager": "pnpm@10.11.0"
 }
