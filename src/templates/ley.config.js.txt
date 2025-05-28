@@ -1,0 +1,7 @@
+import { postgresConfig } from './util/config.js';
+import {config} from 'dotenv-safe';
+
+// Load environment variables from .env file
+config()
+
+export default postgresConfig;
