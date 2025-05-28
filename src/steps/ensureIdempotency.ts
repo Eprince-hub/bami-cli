@@ -1,9 +1,9 @@
-import fs from 'node:fs';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 function ensureSafeToRun() {
   const packageJsonPath = path.resolve(process.cwd(), 'package.json');
-  if (!fs.existsSync(packageJsonPath)) {
+  if (!existsSync(packageJsonPath)) {
     console.error('❌ No package.json found. Are you in a Node project?');
     process.exit(1);
   }
@@ -24,7 +24,7 @@ export function ensureIdempotency() {
   ];
 
   for (const file of filesToCheck) {
-    if (fs.existsSync(file)) {
+    if (existsSync(file)) {
       console.warn(`⚠️ Warning: ${file} already exists. Skipping creation.`);
     }
   }
