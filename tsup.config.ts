@@ -8,4 +8,7 @@ export default defineConfig({
   clean: true,
   outDir: 'dist',
   minify: false,
+  banner: {
+    js: '#!/usr/bin/env node',
+  },
 });
