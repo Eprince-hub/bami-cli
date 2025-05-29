@@ -9,7 +9,7 @@ program
   .description('Bootstrap repeated tasks during development')
   .usage('<command> [options]')
   .helpCommand('help', 'Display help for command')
-  .version('0.1.0');
+  .version('0.1.0-beta.0', '-v, --version', 'Output the current version');
 
 program
   .command('init')
