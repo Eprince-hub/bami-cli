@@ -18,15 +18,44 @@ This checklist ensures safe and consistent releases to npm.
 
 ---
 
+## 🔧 Bumping Version Number
+
+To update the version number, follow these steps:
+
+1. Open `package.json`.
+2. Update the `"version"` field to the new version (e.g., `"0.x.y"`).
+3. Save the file.
+4. Commit the change: `git commit -am "Bump version to v0.x.y"`
+5. Tag the commit: `git tag v0.x.y`
+6. Push the tag: `git push --tags`
+
+OR
+
+You can use `pnpm version` to automate this:
+
+```bash
+pnpm version patch -m "🔖 release v%s" # For patch releases
+pnpm version minor -m "🔖 release v%s" # For minor releases
+pnpm version major -m "🔖 release v%s" # For major releases
+```
+
+---
+
 ## 🚀 Publishing to npm
 
 ```bash
-# Log in to npm if needed
-npm login
-
 # Build CLI
 pnpm build
 
+# Log in to npm if needed
+pnpm login
+
+# Check current user
+pnpm whoami
+
 # Publish
-npm publish
+pnpm publish --access public
+
+# Verify the release
+pnpm view bami-cli@latest
 ```
