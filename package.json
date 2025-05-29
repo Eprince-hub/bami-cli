@@ -1,6 +1,6 @@
 {
   "name": "bami-cli",
-  "version": "0.0.1",
+  "version": "0.1.0-beta.0",
   "description": "Automate dev tasks with Bami",
   "keywords": [
     "automation",
@@ -35,6 +35,11 @@
   "bin": {
     "bami": "./dist/index.js"
   },
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup",
     "postbuild": "cp -r src/templates dist/templates",
@@ -56,6 +61,6 @@
   },
   "packageManager": "pnpm@10.11.0",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18"
   }
 }
