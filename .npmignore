@@ -1,0 +1,21 @@
+# Ignore development and test files
+*.test.ts
+*.spec.ts
+tests/
+coverage/
+.vscode/
+.env
+.env.*
+*.log
+
+# Ignore source files — we only want to ship dist/
+src/
+tsconfig.json
+tsup.config.ts
+
+# Ignore config & infra
+RELEASE.md
+node_modules/
+pnpm-lock.yaml
+.gitignore
+.git/
