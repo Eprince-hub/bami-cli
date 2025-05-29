@@ -8,7 +8,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "bami-cli": "./dist/index.js"
+    "bami": "./dist/index.js"
   },
   "scripts": {
     "build": "tsup",
