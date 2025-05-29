@@ -1,6 +1,6 @@
 {
   "name": "bami-cli",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0",
   "description": "Automate dev tasks with Bami",
   "keywords": [
     "automation",
