@@ -43,6 +43,7 @@
   "scripts": {
     "build": "tsup",
     "postbuild": "cp -r src/templates dist/templates",
+    "clean": "rm -rf dist",
     "dev": "tsx src/index.ts",
     "start": "node dist/index.js",
     "test": "vitest run --coverage"

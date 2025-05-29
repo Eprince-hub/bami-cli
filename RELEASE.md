@@ -8,6 +8,7 @@ This checklist ensures safe and consistent releases to npm.
 
 - [ ] Ensure all tests pass: `pnpm test
 - [ ] Update version in `package.json` (`"version": "0.x.y"`)
+- [ ] Run `pnpm clean` to remove old build artifacts
 - [ ] Run `pnpm build` to generate the latest `dist/`
 - [ ] Test locally with `pnpm link` or `npx .` from a fresh project
 - [ ] Update `README.md` if needed
@@ -27,5 +28,5 @@ npm login
 pnpm build
 
 # Publish
-npm publish --access public
+npm publish
 ```
