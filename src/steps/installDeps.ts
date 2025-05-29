@@ -1,3 +1,4 @@
+import { logInfo } from '../../utils/logger';
 import { detectPackageManager } from '../../utils/packageManager';
 import { runShellCommand } from '../../utils/shell';
 
@@ -6,7 +7,7 @@ export function installDependencies() {
 
   const deps = ['postgres', 'ley', 'dotenv-safe', 'tsx'];
 
-  console.log(`📦 Installing dependencies using ${pkgManager}...`);
+  logInfo(`📦 Installing dependencies using ${pkgManager}...`);
 
   let installCmd = '';
   switch (pkgManager) {

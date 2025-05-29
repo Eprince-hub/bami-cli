@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
+import { logInfo } from '../utils/logger';
 import { runInitCommand } from './commands/init';
 import { runCreateTemplateCommand } from './commands/local/createTemplate';
 
@@ -16,7 +17,7 @@ program
   .description('Setup PostgreSQL and Ley migration structure')
   .option('-v, --verbose', 'Enable verbose logging')
   .action(() => {
-    console.log('🎉 Initializing project...');
+    logInfo('🎉 Initializing project...');
     runInitCommand();
   });
 

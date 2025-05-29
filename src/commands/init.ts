@@ -1,4 +1,4 @@
-import { logInfo } from '../../utils/logger';
+import { logError, logInfo } from '../../utils/logger';
 import { createFiles } from '../steps/createFiles';
 import { idempotent } from '../steps/idempotent';
 import { installDependencies } from '../steps/installDeps';
@@ -18,6 +18,6 @@ export async function runInitCommand() {
 
     logInfo('✅ Setup complete!');
   } catch (error) {
-    console.error(`❌ Error: ${(error as Error).message}`);
+    logError(`Error: ${(error as Error).message}`);
   }
 }

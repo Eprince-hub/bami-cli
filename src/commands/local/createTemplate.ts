@@ -1,13 +1,13 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { TEMPLATE_DIR } from '../../../utils/file';
-import { logInfo } from '../../../utils/logger';
+import { logError, logInfo } from '../../../utils/logger';
 
 export function runCreateTemplateCommand(name: string) {
   const filePath = join(TEMPLATE_DIR, `${name}.txt`);
 
   if (existsSync(filePath)) {
-    console.error(`❌ Template already exists: ${filePath}`);
+    logError(`Template already exists: ${filePath}`);
     process.exit(1);
   }
 

@@ -1,5 +1,6 @@
 import { appendFileSync, existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { logInfo } from './logger';
 
 export function entriesIgnore(entries: string[]) {
   const gitignorePath = resolve(process.cwd(), '.gitignore');
@@ -16,5 +17,5 @@ export function entriesIgnore(entries: string[]) {
   const contentToAdd = (needsNewline ? '\n' : '') + toAdd.join('\n') + '\n';
 
   appendFileSync(gitignorePath, contentToAdd);
-  console.log(`➕ Added to .gitignore: ${toAdd.map((e) => e).join(', ')}`);
+  logInfo(`➕ Added to .gitignore: ${toAdd.map((e) => e).join(', ')}`);
 }
