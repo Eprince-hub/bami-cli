@@ -5,7 +5,7 @@ import { runInitCommand } from './commands/init';
 import { runCreateTemplateCommand } from './commands/local/createTemplate';
 
 program
-  .name('joo-cli')
+  .name('bami-cli')
   .description('Bootstrap repeated tasks during development')
   .usage('<command> [options]')
   .helpCommand('help', 'Display help for command')
@@ -20,7 +20,7 @@ program
     runInitCommand();
   });
 
-if (process.env.BOB_DEV === '1') {
+if (process.env.BAMI_DEV === '1') {
   program
     .command('create-template', { isDefault: false, hidden: true })
     .description('Create a new template file scaffold')

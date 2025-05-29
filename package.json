@@ -1,5 +1,5 @@
 {
-  "name": "joo-cli",
+  "name": "bami-cli",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -8,7 +8,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "joo-cli": "./dist/index.js"
+    "bami-cli": "./dist/index.js"
   },
   "scripts": {
     "build": "tsup",
