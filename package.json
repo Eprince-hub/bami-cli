@@ -1,10 +1,35 @@
 {
   "name": "bami-cli",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "license": "ISC",
-  "author": "",
+  "version": "0.0.1",
+  "description": "Automate dev tasks with Bami",
+  "keywords": [
+    "automation",
+    "args",
+    "arguments",
+    "bami-cli",
+    "bami",
+    "cli",
+    "command",
+    "command line",
+    "command line interface",
+    "console"
+  ],
+  "bugs": {
+    "url": "https://github.com/Eprince-hub/bami-cli/issues",
+    "mail": "techtalkwithvictor@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eprince-hub/bami-cli"
+  },
+  "license": "MIT",
+  "author": "Victor Ejike <https://github.com/Eprince-hub>",
+  "contributors": [
+    {
+      "name": "Victor Ejike",
+      "github": "https://github.com/Eprince-hub"
+    }
+  ],
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -29,5 +54,8 @@
     "typescript": "^5.8.3",
     "vitest": "^3.1.4"
   },
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
